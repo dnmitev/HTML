@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registration form</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<form>
+			<table border="1" width="600px">
+				<tbody>
+					<tr>
+						<td>
+							Last Name
+						</td>
+						<td>
+							<input type="text" name="LastName" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							First Name
+						</td>
+						<td>
+							<input type="text" name="FirstName" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Address
+						</td>
+						<td>
+							<textarea name="Address">Please enter your address here... </textarea>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							ZIP/Postal Code
+						</td>
+						<td>
+							<input type="text" name="PostalCode" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Country
+						</td>
+						<td>
+							<select name="Country">
+								<option value="Bulgaria" selected="selected">Bulgaria</option>
+								<option value="Nigeria" selected="selected">Nigeria</option>
+								<option value="Germany" selected="selected">Germany</option>
+								<option value="USA" selected="selected">USA</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							City
+						</td>
+						<td>
+							<input type="text" name="City" style="width:80px"/>
+							State<input type="text" name="State" style="width:80px" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Phone (country code, area code, number)
+						</td>
+						<td>
+							(+<input type="text" name="CountryCode" style="width:35px" />)
+							<input type="text" name="AreaCode" style="width:35px" />
+							-<input type="text" name="PhoneNumber" style="width:100px"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							E-mail
+						</td>
+						<td>
+							<input type="text" name="Email" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Birth date
+						</td>
+						<td>
+							Month <input type="text" name="Month" size="2" />
+							Day <input type="text" name="Day" size="2" />
+							Year (4 digit) <input type="text" name="Year" size="4" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Gender
+						</td>
+						<td>
+							<select name="Gender">
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Starting date
+						</td>
+						<td>
+							<input type="radio" name="start" value="Sprint 2006" />
+							<input type="radio" name="start" value="Summer 2006" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Comments/Questions
+						</td>
+						<td>
+							<textarea name="Comments">You can enter your comments/questions here...</textarea>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input type="submit" name="SubmitBtn" value="Submit" />
+							<input type="reset" name="ClearBtn" value="Clear the form" />
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</body>
+</html>
