@@ -4,55 +4,63 @@
 		<title>Registration form</title>
 		<meta charset="utf-8" />
 		<style>
-			#formTable 
+			table,td
 			{
-				border="1";
-				width="600px";
+				border: 1px solid black;
 			}
 		</style>
 	</head>
 	<body>
-		<form>
+		<form name="signUp" method="post" action="some-script.php">
 			<table id="formTable">
 				<tbody>
 					<tr>
 						<td>
-							Last Name
+							<label for="ln">Last Name</label>
 						</td>
+						
 						<td>
-							<input type="text" name="LastName" />
-						</td>
-					</tr>
-					<tr>
-						<td>
-							First Name
-						</td>
-						<td>
-							<input type="text" name="FirstName" />
+							<input type="text" id="ln" name="LastName" />
 						</td>
 					</tr>
+					
 					<tr>
 						<td>
-							Address
+							<label for="fn">First Name</label>
 						</td>
+						
 						<td>
-							<textarea name="Address">Please enter your address here... </textarea>
+							<input type="text" id="fn" name="FirstName" />
 						</td>
 					</tr>
+					
 					<tr>
 						<td>
-							ZIP/Postal Code
+							<label for="address">Address</label>
 						</td>
+						
 						<td>
-							<input type="text" name="PostalCode" />
+							<textarea name="Address" id="address" placeholder="Please enter your address here..."></textarea>
 						</td>
 					</tr>
+					
 					<tr>
 						<td>
-							Country
+							<label for="zip">ZIP/Postal Code</label>
 						</td>
+						
 						<td>
-							<select name="Country">
+							<input type="text" id="zip" name="PostalCode" />
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<label for="country">Country</label>
+						</td>
+						
+						<td>
+							<select name="Country" id="country">
 								<option value="Bulgaria" selected="selected">Bulgaria</option>
 								<option value="Nigeria">Nigeria</option>
 								<option value="Germany">Germany</option>
@@ -60,71 +68,106 @@
 							</select>
 						</td>
 					</tr>
+					
 					<tr>
 						<td>
-							City
+							<label for="town">City</label>
 						</td>
+						
 						<td>
-							<input type="text" name="City" style="width:80px"/>
-							State<input type="text" name="State" style="width:80px" />
+							<input type="text" name="City" id="town" style="width:80px"/>
+							
+							<label for="state">State</label>
+							<input type="text" name="State" id="state" style="width:80px" />
 						</td>
 					</tr>
+					
 					<tr>
 						<td>
 							Phone (country code, area code, number)
 						</td>
+						
 						<td>
-							(+<input type="text" name="CountryCode" style="width:35px" />)
-							<input type="text" name="AreaCode" style="width:35px" />
-							-<input type="text" name="PhoneNumber" style="width:100px"/>
+							<span>
+								(+<input type="text" name="CountryCode" style="width:35px" />)
+							</span>
+							
+							<span>
+								<input type="text" name="AreaCode" style="width:35px" />
+							</span>
+							
+							<span>
+								-<input type="text" name="PhoneNumber" style="width:100px"/>
+							</span>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							E-mail
+							<label for="email">E-mail</label>
 						</td>
+						
 						<td>
-							<input type="text" name="Email" />
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Birth date
-						</td>
-						<td>
-							Month <input type="text" name="Month" size="2" />
-							Day <input type="text" name="Day" size="2" />
-							Year (4 digit) <input type="text" name="Year" size="4" />
+							<input type="email" name="Email" id="email"/>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							Gender
+							<label for="birthday">Birth date</label>
 						</td>
+						
 						<td>
-							<select name="Gender">
+							<span id="birthday">
+								<label for="month">Month</label>
+								<input type="text" id="month" name="Month" size="2" />
+								
+								<label for="day">Day</label>
+								<input type="text" id="day" name="Day" size="2" />
+								
+								<label for="year">Year (4 digits)</label>
+								<input type="text" id="year" name="Year" size="4" />
+							</span>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<label for="gender">Gender</label>
+						</td>
+						
+						<td>
+							<select name="Gender" id="gender">
 								<option value="male">Male</option>
 								<option value="female">Female</option>
 							</select>
 						</td>
 					</tr>
+					
 					<tr>
 						<td>
-							Starting date
+							<label for="startDate">Starting date</label>
 						</td>
+						
 						<td>
-							<input type="radio" name="start" value="Sprint 2006">Sprint 2006
-							<input type="radio" name="start" value="Summer 2006">Summer 2006
+							<span id="startDate">								
+								<input type="radio" name="start" id="spring" value="Spring 2006"/>
+								<label for="spring">Spring 2006</label>
+								
+								<input type="radio" name="start" id="summer" value="Summer 2006"/>
+								<label for="summer">Summer 2006</label>
+							</span>
 						</td>
 					</tr>
+					
 					<tr>
 						<td>
-							Comments/Questions
+							<label for="comments">Comments/Questions</label>
 						</td>
+						
 						<td>
-							<textarea name="Comments">You can enter your comments/questions here...</textarea>
+							<textarea name="Comments" id="comments" placeholder="You can enter your comments/questions here..."></textarea>
 						</td>
 					</tr>
+					
 					<tr>
 						<td colspan="2">
 							<input type="submit" name="SubmitBtn" value="Submit" />

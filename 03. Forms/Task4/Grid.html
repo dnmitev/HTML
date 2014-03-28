@@ -3,13 +3,20 @@
 	<head>
 		<title>Grid</title>
 		<meta charset="utf-8" />
+		<style>
+			table,th,td
+			{
+				border: 1px solid black;
+			}
+		</style>
 	</head>
 	<body>
-		<table border="1px">
+		<table>
 			<thead>
 				<tr>
 					<th colspan="6">Drag a column header and drop it here to group by that column</th>
 				</tr>
+				
 				<tr>
 					<th>ProductID</th>
 					<th>Product name</th>
@@ -18,30 +25,37 @@
 					<th>Units in stock</th>
 					<th>Discounted</th>
 				</tr>
+				
 				<tr>
 					<th>
 						<input type="text" name="productId"/>
 					</th>
+					
 					<th>
 						<input type="text" name="productName"/>
 					</th>
+					
 					<th>
 						<input type="text" name="unitPrice"/>
 						<input type="image" src="filter-icon.gif" name="filterBtn" alt="Filter" width="15"/>
 					</th>
+					
 					<th>
 						<input type="text" name="quantity" />
 					</th>
+					
 					<th>
 						<input type="text" name="unitsInStock"/>
 						<input type="image" src="filter-icon.gif" name="filterBtn" alt="Filter" width="15"/>
 					</th>
+					
 					<th>
 						<input type="checkbox" name="discounted" />
 						<input type="image" src="filter-icon.gif" name="filterBtn" alt="Filter" width="15"/>
 					</th>
 				</tr>
 			</thead>
+			
 			<tfoot>
 				<tr>
 					<td colspan="6">
@@ -60,8 +74,8 @@
 						....
 						<input type="button" value="&#9658;" />
 						<input type="button" value="&#9658;|" />
-						Page size: 
-						<select>
+						<label for="page">Page size: </label>
+						<select id="page">
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -76,6 +90,7 @@
 					</td>
 				</tr>
 			</tfoot>
+			
 			<tbody>
 				<tr>
                     <td>1</td>
@@ -85,6 +100,7 @@
                     <td>39</td>
                     <td><input type="checkbox" /></td>
                 </tr>
+				
                 <tr>
                     <td>2</td>
                     <td>Chang</td>
@@ -93,6 +109,7 @@
                     <td>17</td>
                     <td><input type="checkbox" /></td>
                 </tr>
+				
                 <tr>
                     <td>3</td>
                     <td>Anissed Syrup</td>
@@ -101,6 +118,7 @@
                     <td>13</td>
                     <td><input type="checkbox" /></td>
                 </tr>
+				
                 <tr>
                     <td>4</td>
                     <td>Chef Anton's Cajun Seasoning</td>
@@ -109,6 +127,7 @@
                     <td>53</td>
                     <td><input type="checkbox" /></td>
                 </tr>
+				
                 <tr>
                     <td>5</td>
                     <td>Chef Anton's Gumbo Mix</td>
@@ -117,6 +136,7 @@
                     <td>0</td>
                     <td><input type="checkbox" checked="checked" /></td>
                 </tr>
+				
                 <tr>
                     <td>6</td>
                     <td>Grandma's Botsenberry Spread</td>
@@ -125,6 +145,7 @@
                     <td>120</td>
                     <td><input type="checkbox" /></td>
                 </tr>
+				
                 <tr>
                     <td>7</td>
                     <td>Uncle Bob's Organic Dried Pears</td>
@@ -133,6 +154,7 @@
                     <td>15</td>
                     <td><input type="checkbox" /></td>
                 </tr>
+				
                 <tr>
                     <td>8</td>
                     <td>Northwoods Cranberry Sauce</td>
@@ -141,6 +163,7 @@
                     <td>6</td>
                     <td><input type="checkbox" /></td>
                 </tr>
+				
                 <tr>
                     <td>9</td>
                     <td>Mishi Kobe Niku</td>
@@ -149,6 +172,7 @@
                     <td>29</td>
                     <td><input type="checkbox" checked="checked" /></td>
                 </tr>
+				
                 <tr>
                     <td>10</td>
                     <td>Ikura</td>
